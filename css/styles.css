@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: hsla(225, 100%, 94%, 0.8);
+
+    
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+
+}
+
+
+.bg-image{
+    width: 500%;
+    height: 437px;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url(../images/pattern-background-desktop.svg);
+    
+}
+
+.w1{
+    animation: w1 8s linear infinite;
+}
+
+.w2{
+    animation: w1 8s linear infinite, desp 8s ease infinite;
+    opacity: .4 ;
+}
+
+@keyframes w1 {
+    0%{
+        margin-left: 0;
+    }
+
+    100%{
+        margin-left: -1440px;
+    }
+}
+
+@keyframes desp {
+    0%, 100%{
+        transform: translateY(-25px);
+    }
+    
+    50%{
+        transform: translateY(15px);
+    }
+}
+
+
+.card{
+    position: relative;
+    width: 370px;
+
+    overflow: hidden;
+    border-radius: 15px;
+
+    background-color: hsl(228, 100%, 98%);
+
+    /* color: #d6e1ff; */
+}
+
+.img-header img{
+
+    width: 100%;
+
+}
+
+.card-body{
+    padding: 35px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.card-body > *{
+    margin-bottom: 20px;
+}
+
+h1{
+    margin: 0;
+    font-size: 25px;
+    color:  hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+.card-text, .card-box p, .card-cancel-pay{
+    color:hsl(224, 23%, 55%);
+    font-weight: 500;
+}
+
+.card-box{
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsla(225, 100%, 94%, .4);
+}
+
+.card-box img{
+    margin-right: 10px;
+}
+
+.card-box-item{
+    align-items: center;
+    display: flex;
+    justify-items: flex-start;
+}
+
+.card-box h2, .card-box p, .card-box a{
+    margin: 0;
+    font-size: 14px;
+}
+.card-box h2{
+    color: hsl(223, 47%, 23%);
+    margin-bottom: 5px;
+    font-weight: 900;
+}
+.card-box a{
+    font-weight: 700;
+}
+
+
+.card-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.card-pay{
+    height: 40px;
+    margin-bottom: 20px;
+    
+    border-radius: 10px;
+    border: none;
+
+    background-color: hsl(245, 75%, 52%);
+    box-shadow: 0px 10px 10px hsl(245, 40%, 76%);
+    
+    color: white;
+
+    transition: .5s;
+
+}
+.card-cancel-pay{
+
+    align-self: center;
+    background-color: hsl(228, 100%, 98%);
+    border: none;
+    font-weight: 700;
+}
+.card-pay:hover, .card-cancel-pay{
+    cursor: pointer;
+}
+
+.card-pay:hover{
+    background-color: hsl(224, 23%, 55%);
+    transition: .5s;
+    transform: translateY(5px);
+    box-shadow: 0px 5px 5px hsla(245, 40%, 76%, .5);
+
+}
+
